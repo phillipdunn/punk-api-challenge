@@ -1,0 +1,9 @@
+@import '../../../variables.scss';
+.cardList{
+    border: orange 2px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:80vw;
+}
