@@ -14,10 +14,10 @@ class CardList extends Component {
     );
 
     render() { 
-        const { beers } = this.props.beers;
-        return (  
-        <section className={styles.cardList}>{beers.map(this.getCard) }</section>
-         );
+        const { beers } = this.props;
+    return (  
+        <section className={styles.cardList}>{beers.map(this.getCard)}</section>
+        );
     }
 }
  

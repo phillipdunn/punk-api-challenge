@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+.box{
+    border:2px solid #ff0fcc;
+    height:35px;
+    margin:5px;
+    padding-left: 10px;
+    background-color: white;
+    border-radius: 10px;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;;
+   
+    &:hover {
+        box-shadow: $card-hover-shadowing;    }
+}
