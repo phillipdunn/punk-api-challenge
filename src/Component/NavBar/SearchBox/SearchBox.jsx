@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from '../SearchBox/SearchBox.module.scss';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class SearchBox extends Component {
 
     render() { 
@@ -8,14 +7,12 @@ class SearchBox extends Component {
     
         return ( 
             <>
-            <FontAwesomeIcon icon="search" />
             <input 
             type='text' 
             placeholder= {placeholder} 
             onInput={(event) => updateSearchText(event.target.value)}
             autoFocus={true}
             className={styles.box}/>
-           
             </>
          );
     }

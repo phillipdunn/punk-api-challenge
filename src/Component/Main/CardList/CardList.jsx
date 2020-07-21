@@ -9,7 +9,7 @@ import Card from './Card/Card';
 class CardList extends Component {
     getCard = (beer) =>(
         <div className={styles.card} key={beer.id}>
-          <Card beer={beer}/>  
+          <Card beer={beer} toggleFav={this.props.toggleFav}/>  
         </div>
     );
 

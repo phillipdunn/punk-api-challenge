@@ -1,16 +1,62 @@
 @import '../../variables.scss';
 .navbar {
-    width: 19vw;
+    width: 4em;
     background-color: $primary-color;
     height: 100vh;
-}
-
-span {
-    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 30px;
     font-weight: bold;
+    text-align: center;
+}
+
+.google {
+    font-size: 20px;
+    padding-top:15px;
+    padding-left: 15px;
+    position: relative;
+    display: inline-block;
+    &:hover {
+        color:$tertiary-color;  
+    }
+}
+
+.google .googletip{
+    visibility: hidden;
+    width: 100px;
+    background-color: $tertiary-color;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 85%;
+}
+
+.google:hover .googletip {
+    visibility: visible;
+  }
+
+.search {
+    font-size: 30px;
+    padding-left: 15px;
+    &:hover {
+        color: $tertiary-color;
+    }
+}
+
+.favs {
+    font-size: 30px;
+    padding-top: 15px;
+    padding-left: 15px;
+    color:black;
+    &:hover {
+        color: $tertiary-color;
+    }
 }

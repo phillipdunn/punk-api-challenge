@@ -7,7 +7,9 @@
     background-color: white;
     border-radius: 10px;
     outline: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width:10em;
+    z-index: 1;
    
     &:hover {
         box-shadow: $card-hover-shadowing;    }

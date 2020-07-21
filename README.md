@@ -16,7 +16,7 @@ All the wireframe content in black is part of the main challenge - that is, the 
 
 Once you've got the design and layout sorted to render the elements, it's time to add some search functionality. Make it so you can search the beers by their name, and **the page content should update as you type each letter in the box**.
 
-## Extension 2 - Filtering (Red borders/lines)
+<!-- ## Extension 2 - Filtering (Red borders/lines)
 
 Finally the extra extra (only if you have the time), make it so you can filter the content on three conditions: 
 
@@ -25,4 +25,4 @@ Finally the extra extra (only if you have the time), make it so you can filter t
  - High Acidity (pH lower than 4)
 
 
-Best of luck!
+Best of luck! -->

@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
 import styles from './Main.module.scss';
 import CardList from './CardList/CardList';
-import beers from '../../data/beers';
 import NavBar from '../NavBar/NavBar';
-// import DashBoard from '../../containers/DashBoard/DashBoard'
-
-
-
+import { firestore } from "../../firebase";
 
 class Main extends Component {
     state = { 
         searchText: "",
-        beers: beers
+        beers: this.props.beers
      };
+
+     toggleFav = (beer) => {
+        beer.isFav = !beer.isFav;
+        beer.isFav
+          ? this.props.addToFavourites(beer)
+          : this.removeFromFavourites(beer);
+      };
+
+     removeFromFavourites =(beer) => {
+        firestore
+        .collection("beers")
+        .doc(beer.name)
+        .delete()
+        .then(this.setFavouritesState)
+        .catch((err) => console.log(err));
+     }
 
      updateSearchText = (searchText) => {
         this.setState({ searchText });
@@ -24,18 +36,18 @@ class Main extends Component {
       };
 
     render() { 
+        const { user, signInGoogle, signOut } =this.props;
         const matchingBeer = this.state.beers.filter(this.checkBeerName);
         const content = matchingBeer.length ? 
-            <CardList beers = {matchingBeer}/> :
-            <CardList beers = {this.state.beers}/>;
+            <CardList beers = {matchingBeer} toggleFav={this.toggleFav}/> :
+            <CardList beers = {this.state.beers} toggleFav={this.toggleFav}/>;
         return (
             <section className={styles.main}>
                 <NavBar 
-                className={styles.nav} 
                 updateSearchText={this.updateSearchText}
-                user={this.props.user}
-                signInGoogle ={this.props.signInGoogle} 
-                signOut ={this.props.signOut}
+                user={user}
+                signInGoogle ={signInGoogle} 
+                signOut ={signOut}
                 />
                 {content}
             </section>

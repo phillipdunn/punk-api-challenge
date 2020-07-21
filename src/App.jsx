@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Main from './Component/Main';
+// import Main from './Component/Main';
 import firebase, { providerGoogle } from "./firebase";
 import library from './data/fa-library';
+import Routes from './containers/Routes/Routes';
+import beers from './data/beers';
 export default class App extends Component {
 
   state = {
@@ -14,7 +16,6 @@ export default class App extends Component {
   }
   
   signInGoogle = () => {
-    console.log("test this is working");
     firebase.auth().signInWithRedirect(providerGoogle);
   }
 
@@ -35,11 +36,11 @@ export default class App extends Component {
   render() {
     return (
       <>
-      <Main 
+      <Routes
       user={this.state.user}
       signInGoogle ={this.signInGoogle} 
       signOut ={this.signOut}
-      />
+      beers={beers}/>
       </>
     )
   }
