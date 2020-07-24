@@ -7,7 +7,7 @@ import { firestore } from "../../firebase";
 class Main extends Component {
     state = { 
         searchText: "",
-        beers: this.props.beers
+        // beers: this.props.beers
      };
 
      toggleFav = (beer) => {
@@ -36,11 +36,11 @@ class Main extends Component {
       };
 
     render() { 
-        const { user, signInGoogle, signOut } =this.props;
-        const matchingBeer = this.state.beers.filter(this.checkBeerName);
+        const { user, signInGoogle, signOut, beers} =this.props;
+        const matchingBeer = beers.filter(this.checkBeerName);
         const content = matchingBeer.length ? 
             <CardList beers = {matchingBeer} toggleFav={this.toggleFav}/> :
-            <CardList beers = {this.state.beers} toggleFav={this.toggleFav}/>;
+            <CardList beers = {beers} toggleFav={this.toggleFav}/>;
         return (
             <section className={styles.main}>
                 <NavBar 
