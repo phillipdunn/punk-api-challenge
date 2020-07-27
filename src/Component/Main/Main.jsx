@@ -6,8 +6,7 @@ import { firestore } from "../../firebase";
 
 class Main extends Component {
     state = { 
-        searchText: "",
-        // beers: this.props.beers
+        searchText: ""
      };
 
      toggleFav = (beer) => {

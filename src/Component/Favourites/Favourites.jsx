@@ -51,19 +51,14 @@ class Favourites extends Component {
             />
             </section>
             ) : ( 
-              <>
+              <section className={styles.favourites}>
               <NavBar  
               className={styles.navBar} 
               user={user}
               signInGoogle ={signInGoogle} 
               signOut ={signOut}/>
-              <p>You Have No Favourites</p>
-              <Link to="/">
-                <span className={styles.home}>
-                  <FontAwesomeIcon icon="home"/>
-                </span> 
-             </Link>
-              </>
+              <p className={styles.message}>Currently You Have No Favourites</p>
+              </section>
           );
         return (
             <section className={styles.favourites}>{contentObj}</section>

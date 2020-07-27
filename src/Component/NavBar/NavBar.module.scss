@@ -2,7 +2,7 @@
 .navbar {
     width: 4em;
     background-color: $primary-color;
-    height: 100vh;
+    height: 2600px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -13,30 +13,32 @@ p{
     font-weight: bold;
     text-align: center;
 }
+.home {
+    color:black;
+    font-size: 30px;
+    padding-left: 12px;
+    &:hover {
+        color: $tertiary-color;
+    }
+}
+
+.signout{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 15px;
+    position: relative;
+    display: inline-block;
+
+}
 
 .google {
     font-size: 20px;
-    padding-top:15px;
     padding-left: 15px;
     position: relative;
     display: inline-block;
     &:hover {
         color:$tertiary-color;  
     }
-}
-
-.google .googletip{
-    visibility: hidden;
-    width: 100px;
-    background-color: $tertiary-color;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 85%;
 }
 
 .google:hover .googletip {

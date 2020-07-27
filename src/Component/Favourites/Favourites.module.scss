@@ -1,5 +1,18 @@
 @import '../../variables.scss';
 
-.favourites {
+.favourites{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height:100%;
 }
+
+.message{
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+h4{
+    display: none;
+}
+

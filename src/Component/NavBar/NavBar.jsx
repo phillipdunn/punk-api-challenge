@@ -19,31 +19,34 @@ class NavBar extends Component {
         if (user) {
           return (
             <>
-            <span className={styles.google}>
+            <span className={styles.signout}>
               <FontAwesomeIcon icon={"sign-in-alt"} size="lg" onClick={signOut}/>
-              <span className={styles.googletip}>Sign-out</span>
             </span>
             <Link to="/p/favourites">
             <span className={styles.favs}>
               <FontAwesomeIcon icon="heart"/>
             </span> 
             </Link>
-            <span className={styles.search} onClick={this.toggleOpen}>
+            <h4 className={styles.search} onClick={this.toggleOpen}>
               <FontAwesomeIcon icon="search"/>
-            </span> 
+            </h4> 
           
             </>
           );
         } else {
           return (
             <> 
+            <Link to="/">
+               <span className={styles.home}>
+                 <FontAwesomeIcon icon="home"/>
+               </span> 
+            </Link>
             <span className={styles.google}>
             <FontAwesomeIcon icon={["fab","google"]} size="lg" onClick={signInGoogle}/>
-            <span className={styles.googletip}>Sign-in</span>
             </span>
-            <span className={styles.search} onClick={this.toggleOpen}>
+            <h4 className={styles.search} onClick={this.toggleOpen}>
             <FontAwesomeIcon icon="search" />
-            </span>          
+            </h4>          
             </>
           );
         }
