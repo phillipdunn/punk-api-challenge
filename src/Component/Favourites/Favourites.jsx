@@ -53,7 +53,7 @@ class Favourites extends Component {
             ) : ( 
               <section className={styles.favourites}>
               <NavBar  
-              className={styles.navBar} 
+              className={styles.navbar} 
               user={user}
               signInGoogle ={signInGoogle} 
               signOut ={signOut}/>

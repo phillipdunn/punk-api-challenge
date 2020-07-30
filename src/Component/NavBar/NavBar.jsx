@@ -27,26 +27,26 @@ class NavBar extends Component {
               <FontAwesomeIcon icon="heart"/>
             </span> 
             </Link>
-            <h4 className={styles.search} onClick={this.toggleOpen}>
+            <span className={styles.search} onClick={this.toggleOpen}>
               <FontAwesomeIcon icon="search"/>
-            </h4> 
+            </span> 
           
             </>
           );
         } else {
           return (
             <> 
-            <Link to="/">
-               <span className={styles.home}>
+            <Link className={styles.home} to="/">
+               <span >
                  <FontAwesomeIcon icon="home"/>
                </span> 
             </Link>
             <span className={styles.google}>
             <FontAwesomeIcon icon={["fab","google"]} size="lg" onClick={signInGoogle}/>
             </span>
-            <h4 className={styles.search} onClick={this.toggleOpen}>
+            <span className={styles.search} onClick={this.toggleOpen}>
             <FontAwesomeIcon icon="search" />
-            </h4>          
+            </span>          
             </>
           );
         }
